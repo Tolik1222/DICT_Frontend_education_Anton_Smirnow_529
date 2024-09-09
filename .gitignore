@@ -1,0 +1,8 @@
+# misc
+.idea
+
+# SASS ignores
+
+.sass-cashe
+.sass-cache/*
+*.css.map
