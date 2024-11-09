@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            background-color:#ffe0e0
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<body>
+<header>
+    <div class="profile">
+        <img src="https://education.khai.edu/img/main/logo_og.png" alt="Фото профілю">
+        <div class="info">
+            <h1 style="color:DarkCyan;">Ім'я</h1>
+            <label for="position">Посада або професія:</label>
+            <input type="text" id="position" placeholder="Введіть вашу посаду">
+        </div>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">Про мене</a></li>
+        <li><a href="#portfolio">Портфоліо</a></li>
+        <li><a href="#contact">Контакти</a></li>
+    </ul>
+</nav>
+
+<section id="about">
+    <h2 style="color:DarkRed;">Про мене</h2>
+    <label for="aboutText">Коротка інформація про вас:</label>
+    <textarea id="aboutText" placeholder="Розкажіть трохи про себе"></textarea>
+</section>
+
+<section id="portfolio">
+    <h2 style="color:DarkBlue;">Портфоліо</h2>
+    <p>Оберіть країну:</p>
+        <option value="canada">Канада</option>
+        <option value="ukraine">Україна</option>
+        <option value="america">Америка</option>
+        <option value="poland">Польща</option>
+    </select>
+</section>
+
+<section id="contact">
+    <h2>Контакти</h2>
+    <label for="userName">Ваше ім'я:</label>
+    <input type="text" id="userName" placeholder="Введіть ваше ім'я">
+
+    <label for="phoneNumber">Номер телефону:</label>
+    <input type="tel" id="phoneNumber" placeholder="+380 ХХХ ХХХ ХХХХ">
+</section>
+
+<footer>
+    <p>&copy; 2024<span class="highlighted">Ваше Ім'я</span>. Всі права захищені.</p>
+</footer>
+</body>
+</html>
+>
