@@ -1,205 +1,212 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback Form</title>
+  <title>Personal Website</title>
   <style>
-    /* Базові стилі для сторінки */
+    /* Базові стилі */
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #d3cce3, #e9e4f0); /* Градієнтний фон */
+      font-family: "Georgia", serif;
+      background: linear-gradient(to right, #fff0f0, #e0f7fa);
       color: #333;
-      line-height: 1.6; /* Висота рядка */
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
     }
 
     .container {
-      max-width: 600px;
+      max-width: 900px;
       margin: auto;
-      background-color: #ffffff; /* Білий фон для контейнера */
       padding: 20px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
     }
 
-    header, main, footer {
-      padding: 20px;
-      border: 1px solid #ccc;
-      margin-bottom: 20px;
-      border-radius: 8px; /* Заокруглені кути */
-      background-image: url('https://www.example.com/bg-image.jpg'); /* Фонове зображення */
-      background-size: cover;
-      color: white; /* Текст білим */
-    }
-
-    /* Стилізація заголовка */
-    header img {
-      width: 100px;
-      border-radius: 50%; /* Округлення зображення логотипа */
-    }
-
-    header form {
-      margin-top: 10px;
+    nav {
       display: flex;
-    }
-
-    header input[type="text"] {
-      flex: 1;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px 0 0 4px;
-    }
-
-    header button {
-      padding: 8px 16px;
+      justify-content: space-around;
       background-color: #3498db;
-      color: white;
-      border: none;
-      border-radius: 0 4px 4px 0;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    /* Стилізація тексту */
-    h2 {
-      font-family: 'Georgia', serif; /* Шрифт для заголовків */
-      font-size: 24px;
-      color: #3498db;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    /* Стилізація міток */
-    label {
-      color: #333333; /* Темний колір для видимості */
-      font-weight: bold;
-    }
-
-    /* Стилізація елементів форми */
-    input[type="text"], input[type="email"], textarea, select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-      background-color: #f9f9f9;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    button[type="submit"] {
-      padding: 12px 20px;
-      background-color: #2c3e50;
-      color: white;
-      font-size: 16px;
-      border: none;
+      padding: 15px;
       border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
     }
 
-    button[type="submit"]:hover {
-      background-color: #3498db;
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
-    /* Стилізація списків */
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: url('https://www.example.com/header-bg.jpg') no-repeat center;
+      background-size: cover;
+      color: white;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    header p {
+      font-size: 18px;
+    }
+
+    section {
+      background: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #3498db;
+    }
+
     ul {
-      list-style-type: circle; /* Коло для списків */
+      list-style: circle;
       padding-left: 20px;
     }
 
-    li {
-      margin-bottom: 5px;
-      color: #555;
+    ul li {
+      margin: 10px 0;
     }
 
-    /* Стилізація посилань */
-    a {
-      color: #3498db;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      color: #2c3e50;
-      text-decoration: underline;
-    }
-
-    a:visited {
-      color: #8e44ad;
-    }
-
-    /* Стилізація футера */
     footer {
       text-align: center;
-      font-size: 14px;
-      color: #555;
+      padding: 15px;
+      background: #3498db;
+      color: white;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    /* Стилі для форми */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    input[type="text"], input[type="email"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #fff;
+      transition: border-color 0.3s;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, textarea:focus, select:focus {
+      border-color: #3498db;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #2c3e50;
     }
   </style>
 </head>
 <body>
 <div class="container">
+  <!-- Навігація -->
+  <nav>
+    <a href="#about">Про мене</a>
+    <a href="#portfolio">Портфоліо</a>
+    <a href="#contacts">Контакти</a>
+  </nav>
+
+  <!-- Заголовок -->
   <header>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9CVqEdWyjAKTIlP8iQ15suQa0Xlcu3f3lw&s" alt="Logo">
-    <form>
-      <input type="text" placeholder="Search">
-      <button type="submit">Search</button>
-    </form>
+      <h1 style="color: #3498db;>Вітаю на моєму сайті</h1>
+    <p style=" color: #3498db;>Розробник веб-додатків | Front-end спеціаліст</h1>
   </header>
 
-  <main>
-    <h2>Feedback Form</h2>
+  <!-- Про мене -->
+  <section id="about">
+    <h2 style="color: #3498db;">Про мене</h2>
+    <p>Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end та UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.</p>
+  </section>
+
+  <!-- Портфоліо -->
+  <section id="portfolio">
+    <h2>Портфоліо</h2>
+    <ul>
+      <li><strong>Проект 1:</strong> Інтернет-магазин для локального бізнесу</li>
+      <li><strong>Проект 2:</strong> Освітня платформа для онлайн-курсів</li>
+      <li><strong>Проект 3:</strong> Лендінг для стартапу</li>
+    </ul>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contacts">
+    <h2>Контакти</h2>
     <form>
-      <label for="first-name">First name:</label>
-      <input type="text" id="first-name" name="first-name">
+      <label for="name">Ваше ім'я</label>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
 
-      <label for="last-name">Last name:</label>
-      <input type="text" id="last-name" name="last-name">
+      <label for="last-name">Прізвище</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Введіть ваше прізвище">
 
-      <label for="address">Address:</label>
-      <input type="text" id="address" name="address">
+      <label for="address">Адреса</label>
+      <input type="text" id="address" name="address" placeholder="Введіть вашу адресу">
 
-      <label for="city">City/Town:</label>
-      <input type="text" id="city" name="city">
+      <label for="zip">Поштовий індекс</label>
+      <input type="text" id="zip" name="zip" placeholder="Введіть поштовий індекс">
 
-      <label for="zip">ZIP/Postal Code:</label>
-      <input type="text" id="zip" name="zip">
-
-      <label for="country">Country:</label>
+      <label for="country">Країна</label>
       <select id="country" name="country">
-        <option value="none">None</option>
-        <option value="us">United States</option>
-        <option value="uk">United Kingdom</option>
-        <option value="ukraine">Ukraine</option>
-        <option value="australia">Australia</option>
-        <option value="france">France</option>
+        <option value="none">Обрати країну</option>
+        <option value="us">США</option>
+        <option value="uk">Великобританія</option>
+        <option value="ukraine">Україна</option>
+        <option value="australia">Австралія</option>
+        <option value="france">Франція</option>
       </select>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email">
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" placeholder="Введіть вашу електронну пошту">
 
-      <label for="phone">Phone number:</label>
-      <input type="text" id="phone" name="phone">
+      <label for="phone">Номер телефону</label>
+      <input type="text" id="phone" name="phone" placeholder="Введіть ваш номер телефону">
 
-      <label>Was this page helpful?</label>
-      <input type="radio" id="yes" name="helpful" value="yes">
-      <label for="yes">Yes</label>
-      <input type="radio" id="no" name="helpful" value="no">
-      <label for="no">No</label>
+      <label for="message">Повідомлення</label>
+      <textarea id="message" name="message" rows="4" placeholder="Введіть ваше повідомлення"></textarea>
 
-      <label for="comments">Your comments:</label>
-      <textarea id="comments" name="comments" rows="4"></textarea>
-
-      <button type="submit">Submit</button>
+      <button type="submit">Надіслати</button>
     </form>
-  </main>
+  </section>
 
+  <!-- Футер -->
   <footer>
-    © Front-end Development course. All rights reserved.
-    <p>Visit our <a href="https://khai.edu/ua/" target="_blank">official website</a> for more information.</p>
+    <p>© 2024 Веб-розробник. Всі права захищені.</p>
   </footer>
 </div>
 </body>
