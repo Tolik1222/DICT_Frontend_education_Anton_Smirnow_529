@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" lang="uk" content="веб-сторінка, HTML, навчання">
+    <meta name="description" lang="en" content="Description">
+    <meta name="description" lang="uk" content="Простий приклад веб-сторінки з текстовими елементами та посиланнями.">
+    <meta name="author" lang="en" content="Smirnow Anton">
+    <meta name="robots" content="noindex, follow">
+    <title>Document</title>
+</head>
+<body>
+
+<header>
+    <h1>Веб-сторінка з використанням семантичних елементів</h1>
+    <nav>
+        <ul>
+            <li><a href="#p1">Перша секція</a></li>
+            <li><a href="#p2">Друга секція</a></li>
+            <li><a href="#p3">Третя секція</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="p1">
+        <article>
+            <h2>Перша секція: Lorem Ipsum</h2>
+            <p><strong>Aliquam a ante nec mi ullamcorper pulvinar.</strong></p>
+            <p><sup>Praesent sit amet eleifend massa, eu rutrum dui.</sup></p>
+            <p><sub>Phasellus a lorem quam. Nunc et nisi sit amet dolor iaculis tristique non et neque.</sub></p>
+            <!-- Зображення з картою -->
+            <img src="https://via.placeholder.com/300x200" alt="Карта зображення" usemap="#image-map">
+            <map name="image-map">
+                <area shape="rect" coords="0,0,150,100" alt="Посилання 1" href="https://khai.edu/ua/">
+                <area shape="rect" coords="150,100,300,200" alt="Посилання 2" href="https://khai.edu/ua/">
+            </map>
+            <!-- Вбудоване аудіо -->
+            <audio controls>
+                <source src="anymusic.mp3" type="audio/mpeg">
+            </audio>
+        </article>
+    </section>
+
+    <section id="p2">
+        <h3>Друга секція: Таблиця та список</h3>
+        <article>
+            <h4>Список завдань</h4>
+            <ol>
+                <li>Mauris in velit pretium</li>
+                <li>Aliquet lacus et, sollicitudin mauris</li>
+                <li>Ut mi diam</li>
+            </ol>
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                    <th>Заголовок 3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Рядок 1, Колонка 1</td>
+                    <td>Рядок 1, Колонка 2</td>
+                    <td>Рядок 1, Колонка 3</td>
+                </tr>
+                <tr>
+                    <td>Рядок 2, Колонка 1</td>
+                    <td>Рядок 2, Колонка 2</td>
+                    <td>Рядок 2, Колонка 3</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <section id="p3">
+        <h3>Третя секція: Гіперпосилання та вбудоване відео</h3>
+        <p>Гіперпосилання на <a href="https://dict.khai.edu/" target="_blank">сайт KHAI.EDU</a>.</p>
+        <!-- Вбудоване відео -->
+        <video width="320" height="240" controls>
+            <source src="videofile.mp4" type="video/mp4">
+            Ваш браузер не підтримує відео.
+        </video>
+    </section>
+</main>
+
+<footer>
+    <p>Автор: Smirnow Anton</p>
+    <p>Контакти: <a href="mailto:example@example.com">example@example.com</a></p>
+</footer>
+
+</body>
+</html>

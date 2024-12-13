@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <style>
+    /* Базові стилі для сторінки */
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #d3cce3, #e9e4f0); /* Градієнтний фон */
+      color: #333;
+      line-height: 1.6; /* Висота рядка */
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff; /* Білий фон для контейнера */
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для контейнера */
+    }
+
+    header, main, footer {
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      border-radius: 8px; /* Заокруглені кути */
+      background-image: url('https://www.example.com/bg-image.jpg'); /* Фонове зображення */
+      background-size: cover;
+      color: white; /* Текст білим */
+    }
+
+    /* Стилізація заголовка */
+    header img {
+      width: 100px;
+      border-radius: 50%; /* Округлення зображення логотипа */
+    }
+
+    header form {
+      margin-top: 10px;
+      display: flex;
+    }
+
+    header input[type="text"] {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+    }
+
+    header button {
+      padding: 8px 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* Стилізація тексту */
+    h2 {
+      font-family: 'Georgia', serif; /* Шрифт для заголовків */
+      font-size: 24px;
+      color: #3498db;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Стилізація міток */
+    label {
+      color: #333333; /* Темний колір для видимості */
+      font-weight: bold;
+    }
+
+    /* Стилізація елементів форми */
+    input[type="text"], input[type="email"], textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #f9f9f9;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    button[type="submit"] {
+      padding: 12px 20px;
+      background-color: #2c3e50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #3498db;
+    }
+
+    /* Стилізація списків */
+    ul {
+      list-style-type: circle; /* Коло для списків */
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+      color: #555;
+    }
+
+    /* Стилізація посилань */
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      color: #2c3e50;
+      text-decoration: underline;
+    }
+
+    a:visited {
+      color: #8e44ad;
+    }
+
+    /* Стилізація футера */
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO9CVqEdWyjAKTIlP8iQ15suQa0Xlcu3f3lw&s" alt="Logo">
+    <form>
+      <input type="text" placeholder="Search">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main>
+    <h2>Feedback Form</h2>
+    <form>
+      <label for="first-name">First name:</label>
+      <input type="text" id="first-name" name="first-name">
+
+      <label for="last-name">Last name:</label>
+      <input type="text" id="last-name" name="last-name">
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address">
+
+      <label for="city">City/Town:</label>
+      <input type="text" id="city" name="city">
+
+      <label for="zip">ZIP/Postal Code:</label>
+      <input type="text" id="zip" name="zip">
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="none">None</option>
+        <option value="us">United States</option>
+        <option value="uk">United Kingdom</option>
+        <option value="ukraine">Ukraine</option>
+        <option value="australia">Australia</option>
+        <option value="france">France</option>
+      </select>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone number:</label>
+      <input type="text" id="phone" name="phone">
+
+      <label>Was this page helpful?</label>
+      <input type="radio" id="yes" name="helpful" value="yes">
+      <label for="yes">Yes</label>
+      <input type="radio" id="no" name="helpful" value="no">
+      <label for="no">No</label>
+
+      <label for="comments">Your comments:</label>
+      <textarea id="comments" name="comments" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    © Front-end Development course. All rights reserved.
+    <p>Visit our <a href="https://khai.edu/ua/" target="_blank">official website</a> for more information.</p>
+  </footer>
+</div>
+</body>
+</html>

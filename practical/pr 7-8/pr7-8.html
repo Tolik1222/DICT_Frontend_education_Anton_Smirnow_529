@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:color="http://www.w3.org/1999/xhtml">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <style>
+    /* Базові стилі */
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Навігація -->
+  <nav>
+    <a href="#about">Про мене</a>
+    <a href="#portfolio">Портфоліо</a>
+    <a href="#contacts">Контакти</a>
+  </nav>
+
+  <!-- Заголовок -->
+  <header>
+    <h1 style="color: #3498db;>Вітаю на моєму сайті</h1>
+    <p style=" color: #3498db;>Розробник веб-додатків | Front-end спеціаліст</h1>
+  </header>
+
+  <!-- Про мене -->
+  <section id="about">
+    <h2 style="color: #3498db;">Про мене</h2>
+    <p>Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end та UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.</p>
+  </section>
+
+  <!-- Портфоліо -->
+  <section id="portfolio">
+    <h2>Портфоліо</h2>
+    <ul>
+      <li><strong>Проект 1:</strong> Інтернет-магазин для локального бізнесу</li>
+      <li><strong>Проект 2:</strong> Освітня платформа для онлайн-курсів</li>
+      <li><strong>Проект 3:</strong> Лендінг для стартапу</li>
+    </ul>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contacts">
+    <h2>Контакти</h2>
+    <form>
+      <label for="name">Ваше ім'я</label>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+
+      <label for="last-name">Прізвище</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Введіть ваше прізвище">
+
+      <label for="address">Адреса</label>
+      <input type="text" id="address" name="address" placeholder="Введіть вашу адресу">
+
+      <label for="zip">Поштовий індекс</label>
+      <input type="text" id="zip" name="zip" placeholder="Введіть поштовий індекс">
+
+      <label for="country">Країна</label>
+      <select id="country" name="country">
+        <option value="none">Обрати країну</option>
+        <option value="us">США</option>
+        <option value="uk">Великобританія</option>
+        <option value="ukraine">Україна</option>
+        <option value="australia">Австралія</option>
+        <option value="france">Франція</option>
+      </select>
+
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" placeholder="Введіть вашу електронну пошту">
+
+      <label for="phone">Номер телефону</label>
+      <input type="text" id="phone" name="phone" placeholder="Введіть ваш номер телефону">
+
+      <label for="message">Повідомлення</label>
+      <textarea id="message" name="message" rows="4" placeholder="Введіть ваше повідомлення"></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2024 Веб-розробник. Всі права захищені.</p>
+  </footer>
+</div>
+</body>
+</html>

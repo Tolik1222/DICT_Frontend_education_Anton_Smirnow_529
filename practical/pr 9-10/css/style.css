@@ -1,0 +1,199 @@
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(to right, #fff0f0, #e0f7fa);
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #3498db;
+  padding: 15px;
+  border-radius: 5px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+nav a:hover {
+  color: #ffeb3b;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: url("https://www.example.com/header-bg.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3498db;
+}
+header p {
+  font-size: 18px;
+  color: #3498db;
+}
+
+section {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+section h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #3498db;
+}
+section ul {
+  list-style: circle;
+  padding-left: 20px;
+}
+section ul li {
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #3498db;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Fix for inputs crossing the border */
+}
+form label {
+  font-weight: bold;
+}
+form input[type=text],
+form input[type=email],
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  transition: border-color 0.3s;
+}
+form input[type=text]:focus,
+form input[type=email]:focus,
+form textarea:focus,
+form select:focus {
+  border-color: #3498db;
+}
+form button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+form input,
+form select,
+form textarea {
+  box-sizing: border-box;
+}
+
+/* Grid-layout for portfolio section */
+#portfolio ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#portfolio ul li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header {
+    padding: 30px 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  form button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Additional content and translation button */
+#about h2 {
+  color: #3498db;
+}
+#about p {
+  margin-top: 10px;
+}
+
+#about p.additional {
+  margin-top: 20px;
+  color: darkgray;
+}
+
+button.translate {
+  margin-top: 20px;
+  align-self: center;
+  background: #3498db;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */

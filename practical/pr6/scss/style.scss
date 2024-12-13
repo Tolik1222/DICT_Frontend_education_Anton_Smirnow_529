@@ -1,0 +1,100 @@
+// Основні кольори
+$primary-color: #121212;
+$secondary-color: #ffffff;
+$accent-color: #4CAF50;
+$highlight-color: #FFA500;
+
+// Загальні стилі
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  color: $secondary-color;
+  margin: 0;
+}
+
+// Стилі для заголовка
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  .profile {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+
+    .info {
+      h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+      p {
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// Стиль кольорового тексту
+.half-colored {
+  span {
+    color: $highlight-color;
+  }
+}
+
+// Навігаційне меню
+nav ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: darken($accent-color, 10%);
+  list-style: none;
+
+  li {
+    margin: 0 15px;
+
+    a {
+      color: $secondary-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Секції сторінки
+section {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: $primary-color;
+  border: 1px solid $accent-color;
+  border-radius: 8px;
+
+  select {
+    padding: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+// Футер
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: $primary-color;
+  color: $secondary-color;
+  border-top: 1px solid darken($primary-color, 10%);
+}

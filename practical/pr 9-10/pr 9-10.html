@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+</head>
+<body>
+<div class="container">
+  <!-- Навігація -->
+  <nav>
+    <a href="#about">Про мене</a>
+    <a href="#portfolio">Портфоліо</a>
+    <a href="#contacts">Контакти</a>
+  </nav>
+
+  <!-- Заголовок -->
+  <header>
+    <h1 style="color: #3498db;">Вітаю на моєму сайті</h1>
+    <p style="color: #3498db;">Розробник веб-додатків | Front-end спеціаліст</p>
+  </header>
+
+  <!-- Про мене -->
+  <section id="about">
+    <h2 style="color: #3498db;">Про мене</h2>
+    <p>Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end та UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.</p>
+    <p class="additional">Зараз я працюю над масштабними проєктами, що включають інтеграцію штучного інтелекту, і використовую сучасні технології, такі як React, Angular, та Node.js.</p>
+  </section>
+
+  <!-- Портфоліо -->
+  <section id="portfolio">
+    <h2>Портфоліо</h2>
+    <ul>
+          <li><a href="project1.html" target="_blank"><strong>Проект 1:</strong> Інтернет-магазин для локального бізнесу</a></li>
+          <li><a href="project2.html" target="_blank"><strong>Проект 2:</strong> Освітня платформа для онлайн-курсів</a></li>
+          <li><a href="project3.html" target="_blank"><strong>Проект 3:</strong> Лендінг для стартапу</a></li>
+          <li><a href="project4.html" target="_blank"><strong>Проект 4:</strong> Система управління даними для компанії</a></li>
+    </ul>
+  </section>
+
+  <!-- Контакти -->
+  <section id="contacts">
+    <h2>Контакти</h2>
+    <form>
+      <label for="name">Ваше ім'я</label>
+      <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я">
+
+      <label for="last-name">Прізвище</label>
+      <input type="text" id="last-name" name="last-name" placeholder="Введіть ваше прізвище">
+
+      <label for="address">Адреса</label>
+      <input type="text" id="address" name="address" placeholder="Введіть вашу адресу">
+
+      <label for="zip">Поштовий індекс</label>
+      <input type="text" id="zip" name="zip" placeholder="Введіть поштовий індекс">
+
+      <label for="country">Країна</label>
+      <select id="country" name="country">
+        <option value="none">Обрати країну</option>
+        <option value="us">США</option>
+        <option value="uk">Великобританія</option>
+        <option value="ukraine">Україна</option>
+        <option value="australia">Австралія</option>
+        <option value="france">Франція</option>
+      </select>
+
+      <label for="email">Електронна пошта</label>
+      <input type="email" id="email" name="email" placeholder="Введіть вашу електронну пошту">
+
+      <label for="phone">Номер телефону</label>
+      <input type="text" id="phone" name="phone" placeholder="Введіть ваш номер телефону">
+
+      <label for="message">Повідомлення</label>
+      <textarea id="message" name="message" rows="4" placeholder="Введіть ваше повідомлення"></textarea>
+
+      <button type="submit">Надіслати</button>
+    </form>
+  </section>
+
+  <!-- Кнопка для перекладу -->
+  <button class="translate" onclick="translatePage()">Перекласти на англійську</button>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2024 Веб-розробник. Всі права захищені.</p>
+  </footer>
+</div>
+
+<script>
+  let isEnglish = false; // Змінна для відстеження поточної мови
+
+  function translatePage() {
+    if (!isEnglish) {
+      // Переклад на англійську
+
+      // Навігація
+      document.querySelector("nav a[href='#about']").innerText = "About Me";
+      document.querySelector("nav a[href='#portfolio']").innerText = "Portfolio";
+      document.querySelector("nav a[href='#contacts']").innerText = "Contacts";
+
+      // Заголовок
+      document.querySelector("header h1").innerText = "Welcome to my website";
+      document.querySelector("header p").innerText = "Web Application Developer | Front-end Specialist";
+
+      // Про мене
+      document.querySelector("#about h2").innerText = "About Me";
+      document.querySelector("#about p").innerText = "I am a professional web developer with years of experience in front-end development and UI/UX design. My goal is to create intuitive, visually appealing, and efficient web applications.";
+      document.querySelector("#about p.additional").innerText = "Currently, I am working on large-scale projects involving artificial intelligence integration and using modern technologies like React, Angular, and Node.js.";
+
+      // Портфоліо
+      document.querySelector("#portfolio h2").innerText = "Portfolio";
+      document.querySelector("#portfolio ul li:nth-child(1)").innerHTML = "<strong>Project 1:</strong> Online store for local business";
+      document.querySelector("#portfolio ul li:nth-child(2)").innerHTML = "<strong>Project 2:</strong> Educational platform for online courses";
+      document.querySelector("#portfolio ul li:nth-child(3)").innerHTML = "<strong>Project 3:</strong> Landing page for a startup";
+      document.querySelector("#portfolio ul li:nth-child(4)").innerHTML = "<strong>Project 4:</strong> Data management system for a company";
+
+      // Контакти
+      document.querySelector("#contacts h2").innerText = "Contacts";
+      document.querySelector("label[for='name']").innerText = "Your Name";
+      document.querySelector("#name").placeholder = "Enter your name";
+      document.querySelector("label[for='last-name']").innerText = "Last Name";
+      document.querySelector("#last-name").placeholder = "Enter your last name";
+      document.querySelector("label[for='address']").innerText = "Address";
+      document.querySelector("#address").placeholder = "Enter your address";
+      document.querySelector("label[for='zip']").innerText = "Zip Code";
+      document.querySelector("#zip").placeholder = "Enter your zip code";
+      document.querySelector("label[for='country']").innerText = "Country";
+      document.querySelector("#country option[value='none']").innerText = "Select a country";
+      document.querySelector("#country option[value='us']").innerText = "USA";
+      document.querySelector("#country option[value='uk']").innerText = "United Kingdom";
+      document.querySelector("#country option[value='ukraine']").innerText = "Ukraine";
+      document.querySelector("#country option[value='australia']").innerText = "Australia";
+      document.querySelector("#country option[value='france']").innerText = "France";
+      document.querySelector("label[for='email']").innerText = "Email";
+      document.querySelector("#email").placeholder = "Enter your email";
+      document.querySelector("label[for='phone']").innerText = "Phone Number";
+      document.querySelector("#phone").placeholder = "Enter your phone number";
+      document.querySelector("label[for='message']").innerText = "Message";
+      document.querySelector("#message").placeholder = "Enter your message";
+      document.querySelector("form button[type='submit']").innerText = "Submit";
+
+      // Кнопка перекладу
+      document.querySelector("button.translate").innerText = "Translate to Ukrainian";
+
+      // Футер
+      document.querySelector("footer p").innerText = "© 2024 Web Developer. All rights reserved.";
+
+      alert("Page translated to English!");
+    } else {
+      // Переклад на українську
+
+      // Навігація
+      document.querySelector("nav a[href='#about']").innerText = "Про мене";
+      document.querySelector("nav a[href='#portfolio']").innerText = "Портфоліо";
+      document.querySelector("nav a[href='#contacts']").innerText = "Контакти";
+
+      // Заголовок
+      document.querySelector("header h1").innerText = "Вітаю на моєму сайті";
+      document.querySelector("header p").innerText = "Розробник веб-додатків | Front-end спеціаліст";
+
+      // Про мене
+      document.querySelector("#about h2").innerText = "Про мене";
+      document.querySelector("#about p").innerText = "Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end та UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.";
+      document.querySelector("#about p.additional").innerText = "Зараз я працюю над масштабними проєктами, що включають інтеграцію штучного інтелекту, і використовую сучасні технології, такі як React, Angular, та Node.js.";
+
+      // Портфоліо
+      document.querySelector("#portfolio h2").innerText = "Портфоліо";
+      document.querySelector("#portfolio ul li:nth-child(1)").innerHTML = "<strong>Проект 1:</strong> Інтернет-магазин для локального бізнесу";
+      document.querySelector("#portfolio ul li:nth-child(2)").innerHTML = "<strong>Проект 2:</strong> Освітня платформа для онлайн-курсів";
+      document.querySelector("#portfolio ul li:nth-child(3)").innerHTML = "<strong>Проект 3:</strong> Лендінг для стартапу";
+      document.querySelector("#portfolio ul li:nth-child(4)").innerHTML = "<strong>Проект 4:</strong> Система управління даними для компанії";
+
+      // Контакти
+      document.querySelector("#contacts h2").innerText = "Контакти";
+      document.querySelector("label[for='name']").innerText = "Ваше ім'я";
+      document.querySelector("#name").placeholder = "Введіть ваше ім'я";
+      document.querySelector("label[for='last-name']").innerText = "Прізвище";
+      document.querySelector("#last-name").placeholder = "Введіть ваше прізвище";
+      document.querySelector("label[for='address']").innerText = "Адреса";
+      document.querySelector("#address").placeholder = "Введіть вашу адресу";
+      document.querySelector("label[for='zip']").innerText = "Поштовий індекс";
+      document.querySelector("#zip").placeholder = "Введіть поштовий індекс";
+      document.querySelector("label[for='country']").innerText = "Країна";
+      document.querySelector("#country option[value='none']").innerText = "Обрати країну";
+      document.querySelector("#country option[value='us']").innerText = "США";
+      document.querySelector("#country option[value='uk']").innerText = "Великобританія";
+      document.querySelector("#country option[value='ukraine']").innerText = "Україна";
+      document.querySelector("#country option[value='australia']").innerText = "Австралія";
+      document.querySelector("#country option[value='france']").innerText = "Франція";
+      document.querySelector("label[for='email']").innerText = "Електронна пошта";
+      document.querySelector("#email").placeholder = "Введіть вашу електронну пошту";
+      document.querySelector("label[for='phone']").innerText = "Номер телефону";
+      document.querySelector("#phone").placeholder = "Введіть ваш номер телефону";
+      document.querySelector("label[for='message']").innerText = "Повідомлення";
+      document.querySelector("#message").placeholder = "Введіть ваше повідомлення";
+      document.querySelector("form button[type='submit']").innerText = "Надіслати";
+
+      // Кнопка перекладу
+      document.querySelector("button.translate").innerText = "Перекласти на англійську";
+
+      // Футер
+      document.querySelector("footer p").innerText = "© 2024 Веб-розробник. Всі права захищені.";
+
+      alert("Сторінка перекладена на українську!");
+    }
+
+    // Змінюємо стан мови
+    isEnglish = !isEnglish;
+  }
+</script>
