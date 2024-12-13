@@ -11,6 +11,9 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 nav {
@@ -84,10 +87,11 @@ footer {
 form {
   display: flex;
   flex-direction: column;
+  gap: 10px;
+  /* Fix for inputs crossing the border */
 }
 form label {
   font-weight: bold;
-  margin-top: 10px;
 }
 form input[type=text],
 form input[type=email],
@@ -95,7 +99,6 @@ form textarea,
 form select {
   width: 100%;
   padding: 10px;
-  margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
   background: #fff;
@@ -116,4 +119,81 @@ form button {
   cursor: pointer;
   font-size: 16px;
 }
+form input,
+form select,
+form textarea {
+  box-sizing: border-box;
+}
 
+/* Grid-layout for portfolio section */
+#portfolio ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+#portfolio ul li {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header {
+    padding: 30px 10px;
+  }
+  .container {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  nav a {
+    font-size: 16px;
+  }
+  form button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+/* Additional content and translation button */
+#about h2 {
+  color: #3498db;
+}
+#about p {
+  margin-top: 10px;
+}
+
+#about p.additional {
+  margin-top: 20px;
+  color: darkgray;
+}
+
+button.translate {
+  margin-top: 20px;
+  align-self: center;
+  background: #3498db;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
