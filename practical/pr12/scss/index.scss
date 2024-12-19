@@ -1,0 +1,451 @@
+$base-font-family: "Georgia", serif;
+$primary-color: #3498db;
+$hover-color: #ffeb3b;
+$light-background-gradient: linear-gradient(90deg, #f6f6f6, #127fe3);
+$text-color: #333;
+
+$dark-background-gradient: linear-gradient(135deg, #1f1f3a, #0a74b1);
+$dark-text-color: #127fe3;
+$dark-border-color: #444;
+$dark-header-color: #1a1a2e;
+$dark-highlight-color: #34db77;
+
+body.dark-mode {
+  background: $dark-background-gradient;
+  color: $dark-text-color;
+  line-height: 1.6;
+
+  nav {
+    background-color: $dark-header-color;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: center;
+
+    a {
+      color: $dark-text-color;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+      &:hover {
+        color: $hover-color;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+
+  header {
+    background: $dark-header-color;
+    color3498DBFF: $dark-text-color;
+    border: 1px solid $dark-border-color;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  section {
+    background: #2a2a48;
+    color: $dark-text-color;
+    border: 1px solid $dark-border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+    h1 {
+      color: $dark-highlight-color;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      font-size: 18px;
+      color: $dark-text-color;
+    }
+
+    h2 {
+      color: $dark-highlight-color;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    h3 {
+      color: $dark-highlight-color;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    ul li {
+      border-bottom: 1px solid $dark-border-color;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  footer {
+    background: $dark-header-color;
+    color: $dark-text-color;
+    border-top: 1px solid $dark-border-color;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    background: #1e1e38;
+    color: $dark-text-color;
+    border: 1px solid $dark-border-color;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+
+    &:focus {
+      border-color: $hover-color;
+      box-shadow: 0 0 6px $hover-color;
+    }
+  }
+
+  button {
+    background-color: $dark-header-color;
+    color: $dark-text-color;
+    border: 1px solid $dark-border-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      background-color: #29293f;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      background-color: #1a1a2e;
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4) inset;
+    }
+  }
+
+  #info-box {
+    background: #242447;
+    border: 1px solid $dark-border-color;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: $dark-text-color;
+  }
+}
+
+/* Загальний стиль для кнопок */
+button {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05); /* Легка анімація при наведенні */
+}
+
+/* Кнопка перемикання мови */
+.btn-toggle-language {
+  background-color: #3498db; /* Основний колір сайту */
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-toggle-language:hover {
+  background-color: #2980b9; /* Темніший відтінок при наведенні */
+}
+
+/* Кнопка "Показати більше" */
+.btn-toggle-info {
+  background-color: #27ae60;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-toggle-info:hover {
+  background-color: #2ecc71; /* Яскравіший відтінок зеленого при наведенні */
+}
+
+/* Анімація для віконця з додатковою інформацією */
+#info-box {
+  display: none;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+#info-box.fadeIn {
+  display: block;
+  animation: fadeIn 0.5s forwards;
+}
+
+#info-box.fadeOut {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* Анімація плавного входу */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Анімація плавного виходу */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#progress-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #ae2727;
+  z-index: 1000;
+
+  #progress-bar {
+    height: 5px;
+    background: $primary-color;
+    width: 0;
+    transition: width 0.25s ease-in-out;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: $primary-color;
+  padding: 15px;
+  border-radius: 5px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: url('https://www.example.com/header-bg.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+  border: 2px solid $text-color;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+
+  h2 {
+    color: $primary-color;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  h3 {
+    color: $primary-color;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  p {
+    font-size: 18px;
+    color: $primary-color;
+  }
+}
+
+section {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    text-align: center;
+    font-size: 28px;
+    color: $primary-color;
+  }
+
+  ul {
+    list-style: circle;
+    padding-left: 20px;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: $primary-color;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    transition: border-color 0.3s;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+
+  #portfolio ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  #portfolio ul li {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    header {
+      padding: 30px 10px;
+    }
+
+    .container {
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 14px;
+    }
+
+    nav a {
+      font-size: 16px;
+    }
+
+    form button {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
+
+  #about {
+    h2 {
+      color: $primary-color;
+    }
+
+    p {
+      margin-top: 10px;
+    }
+
+    p.additional {
+      margin-top: 20px;
+      color: darkgray;
+    }
+  }
+
+  // Секція для кнопки "Показати більше"
+  button.show-more {
+    display: inline-block;
+    margin: 20px auto; // Центрування
+    background-color: $primary-color; // Основний колір
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Тінь
+    text-transform: capitalize; // Текст з маленьких літер
+  }
+
+
+  // Секція для кнопки "Переключитися на українську"
+  .switch-lang-button {
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: "Arial", sans-serif;
+    color: #ffffff; /* Текст білого кольору */
+    background-color: #3498db; /* Фон у стилі синього кольору */
+    border: 2px solid #2980b9; /* Обведення темнішого відтінку */
+    border-radius: 20px; /* Закруглені краї */
+    cursor: pointer; /* Курсор для натискання */
+    transition: all 0.3s ease; /* Анімація під час взаємодії */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Невелика тінь */
+  }
+
+  /* Наведення на кнопку */
+  .switch-lang-button:hover {
+    background-color: #21618c; /* Темніший синій фон */
+    border-color: #1a4f73; /* Темніше обведення */
+    transform: translateY(-2px); /* Трохи підіймається */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Посилення тіні */
+  }
+
+  /* Натискання на кнопку */
+  .switch-lang-button:active {
+    transform: translateY(0); /* Повертається на місце */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Менша тінь */
+    background-color: #1a4f73; /* Найтемніше забарвлення */
+  }
+}

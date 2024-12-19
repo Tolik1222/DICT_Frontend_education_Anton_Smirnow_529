@@ -42,51 +42,8 @@ nav {
   }
 }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: url('https://www.example.com/header-bg.jpg') no-repeat center;
-  background-size: cover;
-  color: white;
-  border: 2px solid $text-color;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: $primary-color;
-  }
 
-  p {
-    font-size: 18px;
-    color: $primary-color;
-  }
-}
-
-section {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    text-align: center;
-    font-size: 28px;
-    color: $primary-color;
-  }
-
-  ul {
-    list-style: circle;
-    padding-left: 20px;
-
-    li {
-      margin: 10px 0;
-    }
-  }
-}
 
 footer {
   text-align: center;
@@ -97,30 +54,6 @@ footer {
   margin-top: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
-  label {
-    font-weight: bold;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea,
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #fff;
-    transition: border-color 0.3s;
-
-    &:focus {
-      border-color: $primary-color;
-    }
-  }
 
   button {
     padding: 10px 20px;
