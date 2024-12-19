@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<script src="script.js"></script>
+
+<!-- Прогрес прокручування -->
+<div id="progress-container">
+  <div id="progress-bar"></div>
+</div>
+
+<div class="container">
+  <div>
+    <button id="toggle-language">Switch to English</button>
+    <button id="theme-toggle-button" class="theme-toggle-button">Змінити тему</button>
+  </div>
+
+  <!-- Навігація -->
+  <nav>
+    <a href="#about" class="nav-link" data-lang="Про мене">Про мене</a>
+    <a href="#portfolio" class="nav-link" data-lang="Портфоліо">Портфоліо</a>
+    <a href="#contacts" class="nav-link" data-lang="Контакти">Контакти</a>
+  </nav>
+
+  <!-- Заголовок -->
+  <header>
+    <h1 data-lang="Вітаю на моєму сайті">Вітаю на моєму сайті</h1>
+    <p data-lang="Розробник веб-додатків | Front-end спеціаліст">Розробник веб-додатків | Front-end спеціаліст</p>
+  </header>
+
+  <!-- Про мене -->
+  <section id="about">
+    <h2 data-lang="Про мене">Про мене</h2>
+    <p data-lang="Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end і UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.">
+      Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end і UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.
+    </p>
+    <p class="additional" data-lang="Зараз я працюю над масштабними проєктами, що включають інтеграцію штучного інтелекту, і використовую сучасні технології, такі як React, Angular, та Node.js.">
+      Зараз я працюю над масштабними проєктами, що включають інтеграцію штучного інтелекту, і використовую сучасні технології, такі як React, Angular, та Node.js.
+    </p>
+  </section>
+
+  <!-- Портфоліо -->
+  <section id="portfolio">
+    <h2 data-lang="Портфоліо">Портфоліо</h2>
+    <div class="projects">
+      <a href="https://example.com/project1" target="_blank" class="project">
+        <h3 data-lang="Проєкт 1: Магазин книг">Проєкт 1: Магазин книг</h3>
+        <p data-lang="Онлайн-магазин, що дозволяє зручно купувати книжки.">Онлайн-магазин, що дозволяє зручно купувати книжки.</p>
+      </a>
+      <a href="https://example.com/project2" target="_blank" class="project">
+        <h3 data-lang="Проєкт 2: Фітнес-трекер">Проєкт 2: Фітнес-трекер</h3>
+        <p data-lang="Додаток для відстеження здоров'я та фізичної активності.">Додаток для відстеження здоров'я та фізичної активності.</p>
+      </a>
+      <a href="https://example.com/project3" target="_blank" class="project">
+        <h3 data-lang="Проєкт 3: Освітня платформа">Проєкт 3: Освітня платформа</h3>
+        <p data-lang="Інтерактивна платформа для онлайн-навчання і курсів.">Інтерактивна платформа для онлайн-навчання і курсів.</p>
+      </a>
+      <a href="https://example.com/project4" target="_blank" class="project">
+        <h3 data-lang="Проєкт 4: Планувальник задач">Проєкт 4: Планувальник задач</h3>
+        <p data-lang="Інструмент для управління задачами та підвищення продуктивності.">Інструмент для управління задачами та підвищення продуктивності.</p>
+    </a>
+  </div>
+</section>
+
+  <!-- Контакти -->
+  <section id="contacts">
+    <h2 data-lang="Контакти">Контакти</h2>
+    <form id="contact-form">
+      <!-- Ім'я -->
+      <label for="name" data-lang="Ваше ім'я">Ваше ім'я</label>
+      <input type="text" id="name" name="name" data-placeholder="Введіть ваше ім'я" placeholder="Введіть ваше ім'я" required>
+
+      <!-- Прізвище -->
+      <label for="surname" data-lang="Прізвище">Прізвище</label>
+      <input type="text" id="surname" name="surname" data-placeholder="Введіть ваше прізвище" placeholder="Введіть ваше прізвище" required>
+
+
+      <!-- Адреса -->
+      <label for="address" data-lang="Адреса">Адреса</label>
+      <input type="text" id="address" name="address" data-placeholder="Введіть вашу адресу" placeholder="Введіть вашу адресу" required>
+
+      <!-- Поштовий індекс -->
+      <label for="postcode" data-lang="Поштовий індекс">Поштовий індекс</label>
+      <input type="text" id="postcode" name="postcode" data-placeholder="Введіть поштовий індекс" placeholder="Введіть поштовий індекс" required>
+
+
+      <!-- Країна -->
+      <label for="country" data-lang="Країна">Країна</label>
+      <select id="country" name="country" data-placeholder="Обрати країну">
+        <option value="" disabled selected data-lang="Обрати країну">Обрати країну</option>
+        <option value="ua" data-lang="Україна">Україна</option>
+        <option value="us" data-lang="США">США</option>
+        <option value="uk" data-lang="Великобританія">Великобританія</option>
+        <option value="de" data-lang="Німеччина">Німеччина</option>
+      </select>
+
+      <!-- Номер телефону -->
+      <label for="phone" data-lang="Номер телефону">Номер телефону</label>
+      <input type="text" id="phone" name="phone" data-placeholder="Введіть ваш номер телефону" placeholder="Введіть ваш номер телефону" required>
+
+      <!-- Електронна пошта -->
+      <label for="email" data-lang="Електронна пошта">Електронна пошта</label>
+      <input type="email" id="email" name="email" data-placeholder="Введіть вашу електронну пошту" placeholder="Введіть вашу електронну пошту" required>
+
+
+      <!-- Повідомлення -->
+      <label for="message" data-lang="Повідомлення">Повідомлення</label>
+      <textarea id="message" name="message" rows="4" data-placeholder="Введіть ваше повідомлення" placeholder="Введіть ваше повідомлення" required></textarea>
+
+      <button type="submit" data-lang="Надіслати">Надіслати</button>
+    </form>
+    <p id="form-message"></p>
+    <button id="toggle-info" class="btn-toggle-info" data-lang="Показати більше">Показати більше</button>
+  </section>
+
+  <!-- Інформаційне вікно -->
+  <div id="info-box">
+    <p><strong data-lang="Телефон:">Телефон:</strong> +0-00000000</p>
+    <p><strong data-lang="Пошта:">Пошта:</strong> example@gmail.com</p>
+  </div>
+
+  <!-- Футер -->
+  <footer>
+    <p data-lang="© 2024 Веб-розробник. Всі права захищені.">© 2024 Веб-розробник. Всі права захищені.</p>
+  </footer>
+</div>
+
+<script>
+  // Отримання всіх посилань із класом "nav-link"
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  // Додавання обробників подій для плавного скролу
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault(); // Запобігає стандартній поведінці переходу
+      const targetId = link.getAttribute("href").substring(1); // Отримання ID секції
+      const targetSection = document.getElementById(targetId); // Отримання елемента за ID
+
+      if (targetSection) {
+        // Плавна прокрутка секції
+        targetSection.scrollIntoView({
+          behavior: "smooth", // Встановлення плавного прокручування
+          block: "start" // Прокрутка до початку секції
+        });
+      }
+    });
+  });
+
+  const toggleInfoBtn = document.getElementById("toggle-info");
+  const infoBox = document.getElementById("info-box");
+  let isInfoVisible = false; // Стан віконця
+
+  // Додавання обробника події для кнопки "Показати більше"
+  toggleInfoBtn.addEventListener("click", () => {
+    // Перемикання видимості інформаційного віконця
+    isInfoVisible = !isInfoVisible;
+
+    if (isInfoVisible) {
+      // Показати інформаційне вікно з анімацією
+      infoBox.style.display = "block";
+      infoBox.style.animation = "fadeIn 0.5s forwards";
+
+      // Зміна тексту кнопки
+      toggleInfoBtn.textContent = currentLanguage === "uk" ? "Приховати інформацію" : "Hide Information";
+    } else {
+      // Приховати інформаційне вікно
+      infoBox.style.animation = "fadeOut 0.5s forwards";
+      setTimeout(() => {
+        infoBox.style.display = "none";
+      }, 500); // Затримка для завершення анімації
+
+      // Зміна тексту кнопки
+      toggleInfoBtn.textContent = currentLanguage === "uk" ? "Показати більше" : "Show More";
+    }
+  });
+
+  // Отримання всіх кнопок для зміни теми
+  const themeButtons = document.querySelectorAll(".theme-toggle-button");
+
+  // Додавання обробників подій до всіх кнопок
+  themeButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      document.body.classList.toggle("dark-theme"); // Наприклад, перемикає клас темної теми
+    });
+  });
+
+
+  // Функція для оновлення прогрес-бара
+  function updateProgressBar() {
+    const scrollTop = window.scrollY; // Поточна позиція прокручування
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight; // Повна висота документа
+    const scrollPercent = (scrollTop / docHeight) * 100; // Відсоток прокручування
+
+    const progressBar = document.getElementById("progress-bar");
+    progressBar.style.width = scrollPercent + "%"; // Оновлення ширини прогрес-бара
+  }
+
+  // Додавання обробника подій на прокручування
+  window.addEventListener("scroll", updateProgressBar);
+
+
+  const translations = {
+  "Про мене": "About Me",
+    "Портфоліо": "Portfolio",
+    "Проєкт 1: Магазин книг": "Project 1: Book store",
+    "Онлайн-магазин, що дозволяє зручно купувати книжки.": "An online store that allows you to conveniently buy books.",
+    "Проєкт 2: Фітнес-трекер": "Project 2: Fitness tracker",
+          "Додаток для відстеження здоров'я та фізичної активності.": "Application for tracking health and physical activity.",
+    "Проєкт 3: Освітня платформа": "Project 3: Educational platform",
+      "Інтерактивна платформа для онлайн-навчання і курсів.": "Interactive platform for online learning and courses.",
+    "Проєкт 4: Планувальник задач": "Project 4: Task scheduler",
+      "Інструмент для управління задачами та підвищення продуктивності.": "A tool for managing tasks and improving productivity.",
+    "Контакти": "Contacts",
+    "Вітаю на моєму сайті": "Welcome to my Website",
+    "Розробник веб-додатків | Front-end спеціаліст": "Web Application Developer | Front-end Specialist",
+    "Я професійний веб-розробник із багаторічним досвідом роботи в галузі front-end і UI/UX дизайну. Моя мета — створювати інтуїтивно зрозумілі, візуально привабливі та ефективні веб-додатки.":
+            "I am a professional web developer with extensive experience in front-end and UI/UX design. My goal is to create visually appealing, intuitive, and effective web applications.",
+    "Зараз я працюю над масштабними проєктами, що включають інтеграцію штучного інтелекту, і використовую сучасні технології, такі як React, Angular, та Node.js.":
+            "I am currently working on large-scale projects involving artificial intelligence integration and using modern technologies such as React, Angular, and Node.js.",
+    "Ваше ім'я": "Your Name",
+    "Введіть ваше ім'я": "Enter your name",
+    "Прізвище": "Surname",
+    "Введіть ваше прізвище": "Enter your surname",
+    "Адреса": "Address",
+    "Введіть вашу адресу": "Enter your address",
+    "Поштовий індекс": "Postcode",
+    "Введіть поштовий індекс": "Enter your postcode",
+    "Країна": "Country",
+    "Обрати країну": "Select a country",
+    "Україна": "Ukraine",
+    "США": "USA",
+    "Великобританія": "United Kingdom",
+    "Німеччина": "Germany",
+    "Електронна пошта": "Email Address",
+    "Введіть вашу електронну пошту": "Enter your email",
+    "Номер телефону": "Phone Number",
+    "Введіть ваш номер телефону": "Enter your phone number",
+    "Повідомлення": "Message",
+    "Введіть ваше повідомлення": "Enter your message",
+    "Надіслати": "Submit",
+    "Показати більше": "Show More",
+    "Приховати інформацію": "Hide Information",
+    "Телефон:": "Phone:",
+    "Пошта:": "Email:",
+    "© 2024 Веб-розробник. Всі права захищені.": "© 2024 Web Developer. All rights reserved."
+  };
+
+  let currentLanguage = "uk"; // Default language
+
+  document.getElementById("toggle-language").addEventListener("click", () => {
+    const elementsToTranslate = document.querySelectorAll("[data-lang]");
+    const placeholdersToTranslate = document.querySelectorAll("[data-placeholder]");
+    currentLanguage = currentLanguage === "uk" ? "en" : "uk";
+
+    // Translate content
+    elementsToTranslate.forEach((element) => {
+      const originalText = element.getAttribute("data-lang");
+      element.textContent = currentLanguage === "uk"
+              ? originalText
+              : translations[originalText];
+    });
+
+    // Translate placeholders
+    placeholdersToTranslate.forEach((element) => {
+      const originalPlaceholder = element.getAttribute("data-placeholder");
+      element.setAttribute("placeholder", currentLanguage === "uk"
+              ? originalPlaceholder
+              : translations[originalPlaceholder]);
+    });
+
+    // Update button text
+    document.getElementById("toggle-language").textContent =
+            currentLanguage === "uk" ? "Switch to English" : "Переключитися на українську";
+
+  // Update Theme text
+    document.getElementById("theme-toggle-button").textContent =
+          currentLanguage === "uk" ? "Змінити тему" : "Switch Theme";
+  });
+</script>
+</html>

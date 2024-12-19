@@ -19,71 +19,24 @@ body {
   padding: 20px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  background-color: $primary-color;
-  padding: 15px;
-  border-radius: 5px;
-
-  a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-
-    &:hover {
-      color: $hover-color;
-    }
-  }
+form input, form select, form textarea {
+  width: 100%; /* Ширина поля відповідає ширині контейнера */
+  padding: 10px; /* Внутрішні відступи, щоб текст не торкався країв */
+  margin-bottom: 10px; /* Відступ між полями */
+  border: 1px solid #ccc; /* Світло-сіра рамка для чіткості */
+  border-radius: 4px; /* Закруглені кути для привабливого вигляду */
+  box-sizing: border-box; /* Включає padding у ширину елемента */
 }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: url('https://www.example.com/header-bg.jpg') no-repeat center;
-  background-size: cover;
-  color: white;
-  border: 2px solid $text-color;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-  h1 {
-    font-size: 36px;
-    font-weight: bold;
-    color: $primary-color;
-  }
-
-  p {
-    font-size: 18px;
-    color: $primary-color;
-  }
+form button {
+  background-color: #3498db; /* Синій колір для кнопки */
+  color: white; /* Білий текст */
+  padding: 10px 15px; /* Зручний розмір кнопки */
+  border: none; /* Забрали рамку */
+  border-radius: 4px; /* Закруглені кути */
+  cursor: pointer; /* Вказівник змінюється на руку */
 }
 
-section {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    text-align: center;
-    font-size: 28px;
-    color: $primary-color;
-  }
-
-  ul {
-    list-style: circle;
-    padding-left: 20px;
-
-    li {
-      margin: 10px 0;
-    }
-  }
-}
 
 footer {
   text-align: center;
