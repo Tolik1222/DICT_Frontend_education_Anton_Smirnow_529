@@ -19,30 +19,24 @@ body {
   padding: 20px;
 }
 
-
-section {
-  background: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-  h2 {
-    text-align: center;
-    font-size: 28px;
-    color: $primary-color;
-  }
-
-  ul {
-    list-style: circle;
-    padding-left: 20px;
-
-    li {
-      margin: 10px 0;
-    }
-  }
+form input, form select, form textarea {
+  width: 100%; /* Ширина поля відповідає ширині контейнера */
+  padding: 10px; /* Внутрішні відступи, щоб текст не торкався країв */
+  margin-bottom: 10px; /* Відступ між полями */
+  border: 1px solid #ccc; /* Світло-сіра рамка для чіткості */
+  border-radius: 4px; /* Закруглені кути для привабливого вигляду */
+  box-sizing: border-box; /* Включає padding у ширину елемента */
 }
+
+form button {
+  background-color: #3498db; /* Синій колір для кнопки */
+  color: white; /* Білий текст */
+  padding: 10px 15px; /* Зручний розмір кнопки */
+  border: none; /* Забрали рамку */
+  border-radius: 4px; /* Закруглені кути */
+  cursor: pointer; /* Вказівник змінюється на руку */
+}
+
 
 footer {
   text-align: center;
