@@ -124,6 +124,7 @@ button:hover {
   background-color: #2980b9; /* Темніший відтінок при наведенні */
 }
 
+
 /* Кнопка "Показати більше" */
 .btn-toggle-info {
   background-color: #27ae60;
@@ -376,17 +377,17 @@ form .switch-lang-button {
   border-radius: 20px; /* Закруглені краї */
   cursor: pointer; /* Курсор для натискання */
   transition: all 0.3s ease; /* Анімація під час взаємодії */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Невелика тінь */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Невелика тінь */
 }
 form .switch-lang-button:hover {
   background-color: #21618c; /* Темніший синій фон */
   border-color: #1a4f73; /* Темніше обведення */
   transform: translateY(-2px); /* Трохи підіймається */
-  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Посилення тіні */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Посилення тіні */
 }
 form .switch-lang-button:active {
   transform: translateY(0); /* Повертається на місце */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Менша тінь */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Менша тінь */
   background-color: #1a4f73; /* Найтемніше забарвлення */
 }
 
